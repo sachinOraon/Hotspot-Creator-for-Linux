@@ -1,14 +1,23 @@
 # Hotspot-Creator-for-Linux
 A simple bash script to create hotspot.
+* It may contain some bugs or code cleaning may require as it's in alpha stage.
+* I've just created this script to learn shell scripting.
 
-How to run
+-->How to run
 1. Download the file "hs.sh"
 2. Make it executable
    sudo chmod a+x hs.sh
 3. Execute the script
    sudo sh hs.sh
 
-Some Notes on Creating WiFi Hotspot
+-->To restore your configs and settings
+1. Download restore.sh
+2. Make it executable by entering
+   sudo chmod a+x restore.sh
+3. Execute the script
+   sudo sh restore.sh
+   
+-->How it works
 
 //Requirements
 	two network cards(wireless+wireless || wired+wireless)
