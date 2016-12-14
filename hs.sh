@@ -45,7 +45,6 @@ else
 fi
 }
 
-
 # check for root permissions
 tput clear
 id=`id`; 
@@ -58,13 +57,14 @@ if [ "$id" != "0" ] && [ "$id" != "root" ]; then
 	echo "Script needs root permissions..."
 	echo "Re-Run with adding 'sudo' at begining..."
 	exit 1
+else
+	if [ ! `ls /etc/hs/ 2>/dev/null` ]; then mkdir /etc/hs; fi;
 fi
 
 # check for packages
 if [ ! -e "/etc/hs/packagesInstalled.dat" ]; then
 	packages
 else
-	if [ ! `ls /etc/hs/ 2>/dev/null` ]; then mkdir /etc/hs; fi;	
 	packages
 fi
 
