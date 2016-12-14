@@ -5,7 +5,7 @@
 // How to run
 * Download the file "h.sh"
 * Make it executable
-   sudo chmod a+x hs.sh
+   sudo chmod a+x h.sh
 * Execute the script
    sudo sh h.sh
 
