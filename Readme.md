@@ -4,7 +4,7 @@
 
 // How to run
 * Download the file "h.sh"
-* Make it executable
+* Make it executable...
    sudo chmod a+x h.sh
 * Execute the script
    sudo sh h.sh
@@ -34,7 +34,7 @@ this config file will be setting up what IP address range you'll be issuing to o
 
 // editing the file(/etc/network/interfaces) for our interfaces and make sure that the IP address for our wifi connection stays the same throught reboots.
 
-// specify the config file to be used by hostapd by replacing the contents of /etc/default/hostapd with * DAEMON_CONF="/etc/hostapd/hostapd.conf"
+// specify the config file to be used by hostapd by replacing the contents of /etc/default/hostapd with DAEMON_CONF="/etc/hostapd/hostapd.conf"
 
 // enable forwarding on our network card
 * echo 1 > /proc/sys/net/ipv4/ip_forward
