@@ -3,16 +3,16 @@
 * It may contain some bugs as I'm a beginner in shell scripting. I created it to learn bash scripting.
 
 // How to run
-1. Download the file "h.sh"
-2. Make it executable
+* Download the file "h.sh"
+* Make it executable
    sudo chmod a+x hs.sh
-3. Execute the script
+* Execute the script
    sudo sh h.sh
 
 // Switches to speed up things.
--r   To clear log and configs. Restores the modified files.
--c   To quickly run the hostapd.conf file saved previously.
--h   To display help screen.
+* -r   To clear log and configs. Restores the modified files.
+* -c   To quickly run the hostapd.conf file saved previously.
+* -h   To display help screen.
 
 // Some Notes on Creating WiFi Hotspot
 
@@ -20,8 +20,8 @@
 Two network cards(wireless+wireless || wired+wireless) one wireless device will allow other devices to connect through the hotspot and other connection will allow to access internet.
 
 // Dependencies
-1) hostapd(allows other devices to connect to your WiFi card i.e creates AcessPoint)
-2) udhcpd(assigns IP addresses users i.e runs DHCP server)
+* hostapd(allows other devices to connect to your WiFi card i.e creates AcessPoint)
+* udhcpd(assigns IP addresses users i.e runs DHCP server)
 
 // editing /etc/udhcpd.conf
 this config file will be setting up what IP address range you'll be issuing to other devices as well as what DNS servers you'll be issuing to these users.
@@ -34,7 +34,7 @@ this config file will be setting up what IP address range you'll be issuing to o
 
 // editing the file(/etc/network/interfaces) for our interfaces and make sure that the IP address for our wifi connection stays the same throught reboots.
 
-// specify the config file to be used by hostapd by replacing the contents of /etc/default/hostapd with DAEMON_CONF="/etc/hostapd/hostapd.conf"
+// specify the config file to be used by hostapd by replacing the contents of /etc/default/hostapd with * DAEMON_CONF="/etc/hostapd/hostapd.conf"
 
 // enable forwarding on our network card
 * echo 1 > /proc/sys/net/ipv4/ip_forward
