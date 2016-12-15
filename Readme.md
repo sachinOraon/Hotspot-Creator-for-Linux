@@ -1,18 +1,17 @@
 # A simple bash script to create hotspot and enabling internet connection sharing.
 
-* It may contain some bugs as I'm a beginner in shell scripting. I created it to learn bash scripting.
-
 // How to run
 * Download the file "h.sh"
 * Make it executable...
-   sudo chmod a+x h.sh
+   "sudo chmod a+x h.sh"
 * Execute the script
-   sudo sh h.sh
+   "sudo sh h.sh"
 
-// Switches to speed up things.
-* -r   To clear log and configs. Restores the modified files.
-* -c   To quickly run the hostapd.conf file saved previously.
-* -h   To display help screen.
+// Flags to speed up things.
+* -r        To clear log and configs. Restores the modified files.
+* -c        To quickly run the hostapd.conf file saved previously.
+* -s        To stop hostapd and udhcpd services. 
+* -h        To display help screen.
 
 // Some Notes on Creating WiFi Hotspot
 
@@ -52,6 +51,6 @@ iptables-save > /etc/iptables.ipv4.nat
 * service hostapd start
 * service udhcpd start
 
-//
+// init links
 * update-rc.d hostapd enable
 * update-rc.d udhcpd enable
