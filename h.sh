@@ -167,8 +167,8 @@ echo "---------------------------------------------"
 echo "| Press Enter to run this config            |"
 read enterkey
 echo "---------------------------------------------"
-sh -c "service hostapd restart"
-sh -c "service udhcpd restart"
+service hostapd restart >> /dev/null
+service udhcpd restart >> /dev/null
 
 	if [ `which xterm` ]; then
 		xterm -bg "#000000" -fg "#FFFFFF" -e hostapd -B /etc/hostapd/hostapd.conf
