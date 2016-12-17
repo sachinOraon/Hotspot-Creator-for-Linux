@@ -4,7 +4,7 @@
 
 # resize window
 if [ `which resize` ]; then
-	resize -s 42 66 >/dev/null
+	resize -s 42 66 > /dev/null
 fi
 
 # check for root permissions
@@ -57,8 +57,9 @@ if [ "$varH" = "1" ] || [ "$varU" = "1" ]; then
 	echo ""
 	echo "Press enter to run \033[1mapt-get\033[0m"
 	read enterkey
+	echo "\033[1m---------------------------------------------\033[0m"
 	apt-get update
-	sleep 1
+	sleep 2
 	tput clear
 	if [ "$varH" = "1" ]; then
 		tput clear
@@ -67,6 +68,7 @@ if [ "$varH" = "1" ] || [ "$varU" = "1" ]; then
 		echo "\033[1m---------------------------------------------\033[0m"
 		sleep 1
 		apt-get install hostapd -y
+		sleep 2
 	fi
 	if [ "$varU" = "1" ]; then
 		tput clear
@@ -75,6 +77,7 @@ if [ "$varH" = "1" ] || [ "$varU" = "1" ]; then
 		echo "\033[1m---------------------------------------------\033[0m"
 		sleep 1
 		apt-get install udhcpd -y
+		sleep 2
 	fi
 	sleep 1
 	packages
@@ -425,7 +428,7 @@ EOF
 		cp /etc/hs/hostapd.conf /etc/hostapd/hostapd.conf
 		sleep 1
 	else
-		read -p "Password(min 8 chars)         ? " pass
+		read -p "Password(min 8 chars)          ? " pass
 		echo $pass>/etc/hs/pass.dat
 		echo "---------------------------------------------"
 		echo "Press \033[1mEnter\033[0m to continue ..."; read enterkey
